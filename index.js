@@ -32,7 +32,10 @@ exports.initialize = function initializeDataSource(dataSource, callback) {
                debug('Adding template to settings.operations');
 
                if (baseURL) {
-                   defintion.template.url = url.resolve(baseURL, defintion.template.url);
+                   //changed below as was throwing error.
+                  // defintion.template.url = url.resolve(baseURL, defintion.template.url);
+                   defintion.template.url = baseURL + '/' + defintion.template.url;
+
                }
 
                settings.operations.push(defintion);
