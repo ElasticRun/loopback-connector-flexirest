@@ -35,6 +35,7 @@ exports.initialize = function initializeDataSource(dataSource, callback) {
                    //changed below as was throwing error.
                   // defintion.template.url = url.resolve(baseURL, defintion.template.url);
                    defintion.template.url = baseURL + '/' + defintion.template.url;
+                   console.log(defintion.template.url);
 
                }
 
